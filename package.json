@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jest",
     "build": "babel src -d dist --ignore test.js",
-    "publish-major": "jest && babel src -d dist && npm version major && npm publish",
-    "publish-minor": "jest && babel src -d dist && npm version minor && npm publish",
-    "publish-patch": "jest && babel src -d dist && npm version patch && npm publish"
+    "publish-major": "jest && babel src -d dist --ignore test.js && npm version major && npm publish",
+    "publish-minor": "jest && babel src -d dist --ignore test.js && npm version minor && npm publish",
+    "publish-patch": "jest && babel src -d dist --ignore test.js && npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
