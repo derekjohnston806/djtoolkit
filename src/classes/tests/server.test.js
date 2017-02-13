@@ -7,7 +7,7 @@
     @desc:
       - Provide unit testing for the Server class.
 */
-import Server from "../server";
+import Server from "../Server";
 
 test("Should instantiate a Server object with default properties", () => {
   const server = new Server();
