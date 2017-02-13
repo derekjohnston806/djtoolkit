@@ -1,0 +1,40 @@
+{
+  "name": "djtoolkit",
+  "version": "1.0.0",
+  "description": "A collection of useful javascript classes and functions for reuse across multiple development projects.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "babel src -d dist",
+    "publish-major": "jest && babel src -d dist && npm version major && npm publish",
+    "publish-minor": "jest && babel src -d dist && npm version minor && npm publish",
+    "publish-patch": "jest && babel src -d dist && npm version patch && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derekjohnston806/djtoolkit.git"
+  },
+  "keywords": [
+    "javascript",
+    "helpers",
+    "toolkit",
+    "express"
+  ],
+  "author": "Derek Johnston",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derekjohnston806/djtoolkit/issues"
+  },
+  "homepage": "https://github.com/derekjohnston806/djtoolkit#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-jest": "^18.0.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "jest": "^18.1.0"
+  }
+}
