@@ -8,7 +8,6 @@
       - A helper class for configuring and running an express.js server.
 */
 import express from "express";
-import path from "path";
 import approot from "app-root-path";
 
 // BEGIN CLASS
@@ -130,8 +129,8 @@ export default class Server {
         console.log("Using static content at path:", options.staticDir);
         app.use(express.static(options.staticDir));
       } else {
-        console.log("Using static content at path:", path.join(approot, "public"));
-        app.use(express.static(path.join(approot, "public")));
+        console.log("Using static content at path: " + approot + "/public");
+        app.use(express.static(approot + "/public"));
       }
     }
 
