@@ -140,7 +140,7 @@ var Server = function () {
         }
       }
 
-      if (options !== null && options.hasStatic) {
+      if (typeof options !== "undefined" && options.hasStatic) {
         if (options.staticDir) {
           app.use(_express2.default.static(staticDir));
         } else {
@@ -149,7 +149,7 @@ var Server = function () {
       }
 
       this.instance = app.listen(this.port, function () {
-        if (options !== null && !options.test) {
+        if (typeof options !== "undefined" && !options.test) {
           console.log("Server is listening at port:", _this.port);
         }
       });

@@ -123,7 +123,7 @@ export default class Server {
       }
     }
 
-    if (options !== null && options.hasStatic) {
+    if (typeof options !== "undefined" && options.hasStatic) {
       if (options.staticDir) {
         app.use(express.static(staticDir));
       } else {
@@ -132,7 +132,7 @@ export default class Server {
     }
 
     this.instance = app.listen(this.port, () => {
-      if (options !== null && !options.test) {
+      if (typeof options !== "undefined" && !options.test) {
         console.log("Server is listening at port:", this.port);
       }
     });
