@@ -149,9 +149,7 @@ var Server = function () {
       }
 
       this.instance = app.listen(this.port, function () {
-        if (typeof options !== "undefined" && !options.test) {
-          console.log("Server is listening at port:", _this.port);
-        }
+        console.log("Server is listening at port:", _this.port);
       });
     }
 

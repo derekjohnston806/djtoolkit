@@ -132,9 +132,7 @@ export default class Server {
     }
 
     this.instance = app.listen(this.port, () => {
-      if (typeof options !== "undefined" && !options.test) {
-        console.log("Server is listening at port:", this.port);
-      }
+      console.log("Server is listening at port:", this.port);
     });
   }
 
