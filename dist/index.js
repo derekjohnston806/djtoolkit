@@ -13,5 +13,5 @@ Object.defineProperty(exports, "__esModule", {
       - The entry point for the npm package.
 */
 exports.default = {
-  Server: require("./classes/Server")
+  Server: require("./classes/Server").default
 };
