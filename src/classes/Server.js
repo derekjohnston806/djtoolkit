@@ -8,6 +8,7 @@
       - A helper class for configuring and running an express.js server.
 */
 import express from "express";
+import path from "path";
 
 // BEGIN CLASS
 export default class Server {

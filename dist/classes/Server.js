@@ -19,6 +19,10 @@ var _express = require("express");
 
 var _express2 = _interopRequireDefault(_express);
 
+var _path = require("path");
+
+var _path2 = _interopRequireDefault(_path);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -144,7 +148,7 @@ var Server = function () {
         if (options.staticDir) {
           app.use(_express2.default.static(staticDir));
         } else {
-          app.use(_express2.default.static(path.join(__dirname, "public")));
+          app.use(_express2.default.static(_path2.default.join(__dirname, "public")));
         }
       }
 
