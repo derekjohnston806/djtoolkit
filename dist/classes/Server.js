@@ -117,7 +117,7 @@ var Server = function () {
        @param:
         - options (Object): Some runtime options for the server.
             - Properties:
-                - test (Boolean): Is this a test instance of the server? 
+                - test (Boolean): Is this a test instance of the server?
                 - hasStatic (Boolean): Should the server use the express middleware? Defaults to false
                 - staticDir (String): The directory where static content is hosted. Defaults to __dirname + "/public"
        @return:
@@ -140,7 +140,7 @@ var Server = function () {
         }
       }
 
-      if (options.hasStatic) {
+      if (options !== null && options.hasStatic) {
         if (options.staticDir) {
           app.use(_express2.default.static(staticDir));
         } else {
@@ -149,7 +149,7 @@ var Server = function () {
       }
 
       this.instance = app.listen(this.port, function () {
-        if (!options.test) {
+        if (options !== null && !options.test) {
           console.log("Server is listening at port:", _this.port);
         }
       });

@@ -104,7 +104,7 @@ export default class Server {
     @param:
       - options (Object): Some runtime options for the server.
           - Properties:
-              - test (Boolean): Is this a test instance of the server? 
+              - test (Boolean): Is this a test instance of the server?
               - hasStatic (Boolean): Should the server use the express middleware? Defaults to false
               - staticDir (String): The directory where static content is hosted. Defaults to __dirname + "/public"
 
@@ -123,7 +123,7 @@ export default class Server {
       }
     }
 
-    if (options.hasStatic) {
+    if (options !== null && options.hasStatic) {
       if (options.staticDir) {
         app.use(express.static(staticDir));
       } else {
@@ -132,7 +132,7 @@ export default class Server {
     }
 
     this.instance = app.listen(this.port, () => {
-      if (!options.test) {
+      if (options !== null && !options.test) {
         console.log("Server is listening at port:", this.port);
       }
     });
