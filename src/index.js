@@ -8,5 +8,5 @@
       - The entry point for the npm package.
 */
 export default {
-  Server: require("./classes/Server")
+  Server: require("./classes/Server").default
 }
