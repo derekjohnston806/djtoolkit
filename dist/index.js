@@ -11,3 +11,5 @@
 */
 
 exports.Server = require("./classes/Server").default;
+
+exports.obj2arr = require("./functions/obj2arr").default;
