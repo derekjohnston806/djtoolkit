@@ -1,8 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 /**
     index.js
 
@@ -12,6 +9,5 @@ Object.defineProperty(exports, "__esModule", {
     @desc:
       - The entry point for the npm package.
 */
-exports.default = {
-  Server: require("./classes/Server").default
-};
+
+exports.Server = require("./classes/Server").default;

@@ -7,6 +7,5 @@
     @desc:
       - The entry point for the npm package.
 */
-export default {
-  Server: require("./classes/Server").default
-}
+
+exports.Server = require("./classes/Server").default;
