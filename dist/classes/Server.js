@@ -146,11 +146,10 @@ var Server = function () {
 
       if (typeof options !== "undefined" && options.hasStatic) {
         if (options.staticDir) {
-          console.log("Using static content at path:", staticDir);
-          app.use(_express2.default.static(staticDir));
+          console.log("Using static content at path:", options.staticDir);
+          app.use(_express2.default.static(options.staticDir));
         } else {
-          console.log("Using static content at path:", _path2.default.join(__dirname, "public"));
-          app.use(_express2.default.static(_path2.default.join(__dirname, "public")));
+          throw "No path for static content directory was provided";
         }
       }
 
