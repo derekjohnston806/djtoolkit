@@ -126,8 +126,10 @@ export default class Server {
 
     if (typeof options !== "undefined" && options.hasStatic) {
       if (options.staticDir) {
+        console.log("Using static content at path:", staticDir);
         app.use(express.static(staticDir));
       } else {
+        console.log("Using static content at path:", path.join(__dirname, "public"));
         app.use(express.static(path.join(__dirname, "public")));
       }
     }
