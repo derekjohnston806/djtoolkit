@@ -23,6 +23,10 @@ var _path = require("path");
 
 var _path2 = _interopRequireDefault(_path);
 
+var _appRootPath = require("app-root-path");
+
+var _appRootPath2 = _interopRequireDefault(_appRootPath);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -149,7 +153,8 @@ var Server = function () {
           console.log("Using static content at path:", options.staticDir);
           app.use(_express2.default.static(options.staticDir));
         } else {
-          throw "No path for static content directory was provided";
+          console.log("Using static content at path:", _path2.default.join(_appRootPath2.default, "public"));
+          app.use(_express2.default.static(_path2.default.join(_appRootPath2.default, "public")));
         }
       }
 

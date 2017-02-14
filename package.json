@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/derekjohnston806/djtoolkit#readme",
   "dependencies": {
+    "app-root-path": "^2.0.1",
     "express": "^4.14.1"
   },
   "devDependencies": {

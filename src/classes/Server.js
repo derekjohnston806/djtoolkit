@@ -9,6 +9,7 @@
 */
 import express from "express";
 import path from "path";
+import approot from "app-root-path";
 
 // BEGIN CLASS
 export default class Server {
@@ -129,7 +130,8 @@ export default class Server {
         console.log("Using static content at path:", options.staticDir);
         app.use(express.static(options.staticDir));
       } else {
-        throw "No path for static content directory was provided";
+        console.log("Using static content at path:", path.join(approot, "public"));
+        app.use(express.static(path.join(approot, "public")));
       }
     }
 
